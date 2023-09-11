@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== FAVICON ===============-->
+      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+      <!--=============== REMIXICONS ===============-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+
+      <!--=============== CSS ===============-->   
+      <link rel="stylesheet" href="assets/css/styles.css">
+      <link rel="stylesheet" href="assets/css/card.css">
+
+      <title>HITE</title>
+   </head>
+   <body>
+      <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+         <nav class="nav container">
+            <a href="#" class="nav__logo">
+               <img src="assets/img/logo.png" alt="" class="iconChange"> HITE
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li class="nav__item">
+                      <a href="./index.html" class="nav__link active-link">Home</a>
+                  </li>
+
+                  <li class="nav__item">
+                      <a href="./proveedores.html" class="nav__link"> Proveedores</a>
+                  </li>
+
+                  <li class="nav__item">
+                      <a href="./almacen.html" class="nav__link">Almacén</a>
+                  </li>   
+                                      
+                  <li class="nav__item">
+                      <a href="./gerencia.html" class="nav__link">Gerencia</a>
+                  </li>
+              </ul>
+
+               <!-- Close button -->
+               <div class="nav__close" id="nav-close">
+                  <i class="ri-close-line"></i>
+               </div>
+
+               <img src="assets/img/branch-2.png" alt="" class="nav__img-1">
+               <img src="assets/img/fruit-line-1.png" alt="" class="nav__img-2">
+            </div>
+
+            <div class="nav__buttons">
+               <!-- Theme button -->
+               <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+               <!-- Toggle button -->
+               <div class="nav__toggle" id="nav-toggle">
+                  <i class="ri-apps-2-line"></i>
+               </div>
+            </div>
+
+         </nav>
+      </header>
+
+      <!--==================== MAIN ====================-->
+      <main class="main">
+         <!--==================== HOME ====================-->
+         <section class="home section" id="home">
+            <div class="home__container container grid">
+               <div class="home__data">
+                  <h1 class="home__title">
+                     Assembly  <br>
+                     manufacturing  <br>
+                     company
+                  </h1>
+
+                  <p class="home__description">
+                     venta
+                  </p>
+
+                  <a href="#products" class="button">
+                     Realiza tu pedido
+                  </a>
+
+                  <img src="assets/img/logo.png" alt="image" class="home__fruit">
+               </div>
+
+               <img src="assets/img/home-png.png" alt="image" class="home__img">
+            </div>
+
+            <img src="assets/img/branch-2.png" alt="image" class="home__branch"> 
+         </section>
+
+         <!--==================== ENJOY ====================-->
+
+
+         <!--==================== ABOUT US ====================-->
+
+
+         <!--==================== POPULAR ====================-->
+         <section class="popular section" id="products">
+            <h2 class="section__title">
+               Nuestros productos
+            </h2>
+
+            <div class="popular__container container grid">
+               <article class="popular__card">
+                  <div class="popular__bg"></div>
+                  <img src="assets/img/products-2.png" alt="image" class="popular__img">
+                  <h3 class="popular__title">PINDO</h3>
+                  <span class="popular__subtitle">Lego</span>
+                  <h3 class="popular__price"> <span id = "cant_pindo">0</span></h3>
+                  
+                  <button class="popular__button minus button" id = "btn-pindo" onclick="decrementQuantity(this)">
+                     <i class="ri-subtract-line"></i>
+                  </button>
+
+                  <button class="popular__button plus button" id = "btn-pindo" onclick="incrementQuantity(this)">
+                     <i class="ri-add-line"></i>
+                  </button>
+               </article>
+
+               <article class="popular__card">
+                  <div class="popular__bg"></div>
+                  <img src="assets/img/products-3.png" alt="image" class="popular__img">
+                  <h3 class="popular__title">SAYO</h3>
+                  <span class="popular__subtitle">Lego</span>
+                  <h3 class="popular__price" > <span id = "cant_sayo"> 0 </span></h3>
+
+                  <button class="popular__button minus button" id = "btn-sayo" onclick="decrementQuantity(this)">
+                     <i class="ri-subtract-line"></i>
+                  </button>
+
+                  <button class="popular__button plus button" id = "btn-sayo" onclick="incrementQuantity(this)">
+                     <i class="ri-add-line"></i>
+                  </button>
+               </article>
+
+            </div>
+         </section>
+
+
+         <section class="popular section" id="products">
+            <h2 class="section__title">
+               PRODUCTOS COMPLETADOS
+            </h2>
+
+            <div class="popular__container container grid" id="Finish" >
+               <article class="popular__card">
+
+               </article>
+            </div>
+         </section>
+
+         <!--==================== JOIN US ====================-->
+
+      </main>
+
+      <!--==================== FOOTER ====================-->
+      <footer class="footer">
+         
+      </footer>
+
+      <!--========== SCROLL UP ==========-->
+      <a href="#" class="scrollup" id="scroll-up">
+         <i class="ri-arrow-up-s-line"></i>
+      </a>
+      
+    
+
+      <div class="card " id="cart-container">
+         <div class="header-compra">
+            <h2>Tu compra: </h2>
+         </div>
+
+         <div class= "ficha" id = "cantPindo" style="display: none;">
+            <img src="assets/img/products-2.png" width="80px" alt="">
+            <p></p>
+         </div>   
+         <div class = "ficha" id="cantSayo" style="display: none;">
+            <img src="assets/img/products-3.png" width="80px" alt="">
+            <p></p>
+         </div>  
+         
+         <button class="button btnPagar" onclick="pagar()">
+            <p>Comprar</p>
+         </button>
+         <!-- <a href="#" class="button btnPagar">Comprar</a> -->
+
+      </div>
+
+
+
+      <button class="chart " id="btn-cart" onclick="shoppingCart()">
+         <i class="ri-shopping-cart-2-fill"></i>
+      </button>
+
+      <!--=============== SCROLLREVEAL ===============-->
+      <script src="assets/js/theme.js"></script>
+
+      <script src="assets/js/scrollreveal.min.js"></script>
+
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
+   </body>
+</html>
